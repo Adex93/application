@@ -36,7 +36,7 @@ public class MainController {
 
     @PutMapping("/application/offer")
     public void addClientOffer(@Valid @RequestBody LoanOfferDTO loanOfferDTO) {
-        log.info("Произвёлся PUST запрос /application/offer со следующим телом: " + loanOfferDTO);
+        log.info("Произвёлся POST запрос /application/offer со следующим телом: " + loanOfferDTO);
         log.info("Вызвана функция putDeal класса ApplicationService для передачи LoanOfferDTO микросервису Deal");
         applicationService.putDeal(loanOfferDTO);
     }
